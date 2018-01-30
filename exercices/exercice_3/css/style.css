@@ -1,0 +1,46 @@
+
+
+
+
+
+body{
+	text-align:center;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+}
+
+
+h1{
+
+}
+
+#divAllImg{
+	width: 80%;
+	margin: auto;
+}
+
+.divImg{
+	width: 23%;
+	margin: 0 1%;
+	float: left;
+}
+
+.divImg img{
+	max-width: 50%;
+}
+
+.pClick{
+	margin: 0;
+}
+
+
+#imgYou{
+	margin-top: 1%;
+}
+
+#pExplications{
+	position: absolute;
+	left: 50%;
+	bottom: 4%;
+	transform: translate(-50%, 0);
+}
