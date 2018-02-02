@@ -1,0 +1,31 @@
+
+
+#btnGetMeme{
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+}
+
+img{
+	max-width: 50%;
+	display:none;
+	position: absolute;
+}
+
+.borderRed{
+	border: 10px solid red;
+}
+
+.borderBlue{
+	border: 10px solid blue;
+}
+
+.borderYellow{
+	border: 10px solid yellow;
+}
+
+.borderPurple{
+	border: 10px solid purple;
+}
