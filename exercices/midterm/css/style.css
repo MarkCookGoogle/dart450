@@ -1,0 +1,131 @@
+
+
+html, body{
+	height: 100%;
+}
+
+body{
+	background-color: #e7f5f7;
+	user-select: none;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	text-align: center;
+}
+
+#me{
+	z-index:1000;
+	position: absolute;
+	left: 50%;
+	top: 15%;
+	transform: translate(-50%, -50%);
+	height: 10%;
+	width: 10%;
+    animation-name: animMe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+#intro{
+	width: 60%;
+	margin: 15% auto;
+}
+
+
+#pInstructions{
+	font-size: 1.2em;
+	color: #383838;
+	line-height: 1.4;
+}
+
+
+#divGoodLogos{
+	text-align: center;
+	width: 35%;
+	float:left;
+}
+
+#divGoodLogos img{
+	max-width: 40%;
+	padding: 0 5%;
+	float: left;
+}
+
+#divBadLogos{
+	text-align: center;
+	width: 55%;
+	float:right;
+}
+
+#divBadLogos img{
+	max-width: 23%;
+	padding: 0 5%;
+	float: left;
+}
+
+
+#divInfo{
+	position: absolute;
+	left: 5%;
+	bottom: 5%;
+	text-align: left;
+}
+#divInfo p{
+	margin: 6px 0 0 0;
+}
+
+#end{
+	display: none;
+}
+
+#pEnd{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.5em;
+}
+
+
+
+.elements{
+	position: absolute;
+	display: none;
+	max-width: 20%;
+}
+
+
+
+
+@keyframes animMe {
+    from{
+		left: 50%; transition-timing-function: ease-in-out;
+	}
+    25%{
+		left: 52%; transition-timing-function: ease-in-out;
+	}
+    50%{
+		left: 50%; transition-timing-function: ease-in-out;
+	}
+    75%{
+		left: 48%; transition-timing-function: ease-in-out;
+	}
+    to{
+		left: 50%; transition-timing-function: ease-in-out;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
