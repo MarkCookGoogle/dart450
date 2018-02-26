@@ -68,6 +68,7 @@ body{
 	left: 5%;
 	bottom: 5%;
 	text-align: left;
+	display:none;
 }
 #divInfo p{
 	margin: 6px 0 0 0;

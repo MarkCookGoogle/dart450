@@ -10,6 +10,8 @@ var time = 59;
 function startGame(){
   $("#pStart").unbind("click");
   $('#intro').hide();
+  $('#divInfo').show();
+
 
   //set a timer of 1 minute
   var timer = setInterval(function () {
@@ -30,6 +32,7 @@ function startGame(){
               $("#h1Title").html("The week is over.");
               $("#game").hide();
               $("#me").hide();
+              $("#divInfo").hide();
 
               $("#end").show();
               clearInterval(timer);
