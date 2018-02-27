@@ -1,0 +1,41 @@
+
+
+
+body{
+	font-family: sans-serif;
+	background-color: #00fff8;
+    animation: eyesBleeder 1s infinite;
+}
+
+
+div{
+	width: 40%;
+	margin: auto;
+	background-color: white;
+	padding: 5%;
+	margin-top: 50px;
+	color: black;
+}
+
+@keyframes eyesBleeder {
+    from {background-color: #ff0000;}
+    49%{
+    	background-color: #ff0000;
+    }
+    50%{
+    	background-color: #1200ff;
+    }
+    99%{
+    	background-color: #1200ff;
+    }
+    to {background-color: #ff0000;}
+}
+
+.blast {
+  display: inline-block;
+  color: #c2ffff;
+}
+
+.blast:nth-child(odd) {
+  color: #e7ff00;
+}
