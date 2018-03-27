@@ -1,0 +1,13 @@
+/*
+
+Geolocation
+Marc-Olivier Lamothe
+
+Basic styling.
+
+*/
+
+#divError{
+	display: none;
+	color: black;
+}

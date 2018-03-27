@@ -1,0 +1,45 @@
+<!-- ************************************************************************
+
+Fresh Prince
+Pippin Barr
+
+A webpage that displays the lyrics to the Fresh Prince of Bel Air
+if you're in Philly or LA, and otherwise doesn't.
+
+This kind of thing is called "Geofencing".
+
+************************************************************************ -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <title>GeoLocation</title>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <!-- Including jQuery by default -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- include script file -->
+  <script src="js/script.js" content="text/javascript"></script>
+
+</head>
+
+
+<body>
+
+  <div id="divWhereFrom">
+    <p id="pWhereYouFrom">Acquiring your location...</p>
+  </div>
+
+  <div id="divError">
+    <p>You need to allow me to locate you. Refresh the page and grant me the permission, or else...</p>
+  </div>
+</body>
+
+</html>
