@@ -1,0 +1,36 @@
+
+
+
+
+
+
+html{
+    height: 100%;
+    background: linear-gradient(#2a7fb7, #17537b);
+}
+
+body{
+    font-family: Gill Sans, sans-serif;
+    color: white;
+}
+
+#divIntro{
+    text-align:center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#introTitle{
+    font-size: 4em;
+}
+
+#aStartQ{
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 2%;
+    background-color: white;
+    color: #2a7fb7;
+    display: inline;
+}

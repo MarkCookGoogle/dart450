@@ -1,0 +1,37 @@
+
+
+
+
+
+
+html{
+    height: 100%;
+    background: linear-gradient(#2a7fb7, #17537b);
+}
+
+body{
+    font-family: Gill Sans, sans-serif;
+    color: white;
+}
+
+#end{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+#end h1{
+    font-size: 2em;
+}
+
+#end h2{
+    font-size: 2.5em;
+}
+
+#end p{
+    font-size: 1.3em;
+}
+
+#end img{
+    max-width: 100%;
+}
