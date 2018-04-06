@@ -20,8 +20,26 @@ body{
     height: 100%;
 }
 
+/*     A LINKS     */
 
 
+#aTxtEntry, #aResultDivEntry, #aAfterLocation{
+  color: white;
+}
+#aTxtEntry:visited, #aResultDivEntry:visited, #aAfterLocation:visited{
+  color: white;
+}
+#aTxtEntry:hover, #aResultDivEntry:hover, #aAfterLocation:hover{
+  color: lightgrey;
+}
+#aTxtEntry:active, #aResultDivEntry:active, #aAfterLocation:active{
+  color: grey;
+}
+
+
+#aResultDivEntry, #aAfterLocation{
+  margin-top: 1.5%;
+}
 
 
 /*     HIDING CONTENT AT THE START     */
@@ -31,6 +49,15 @@ body{
     display:none;
     opacity:0;
 }
+
+#divTxtEntry{
+  display:none;
+}
+
+#resultDivEntry{
+  display:none;
+}
+
 
 #destinationDrag{
     display:none;
@@ -46,6 +73,8 @@ body{
     display:none;
     opacity:0;
 }
+
+
 
 /*     PAGE INTRO     */
 
@@ -71,9 +100,6 @@ body{
     color: #2a7fb7;
     display: inline;
 }
-
-
-
 
 
 
@@ -140,8 +166,121 @@ body{
 
 
 
+/*     PAGE TXT ENTRY     */
+
+#divTxtEntry{
+    width: 55%;
+    height: 70%;
+    margin: 10% auto;
+    text-align:center;
+}
+
+#divTxtEntry textarea{
+  width: 100%;
+  height: 45%;
+  margin: 1.5% 0;
+}
 
 
+#resultDivEntry{
+    width: 55%;
+    height: 70%;
+    margin: 10% auto;
+    text-align:center;
+}
+
+#resultDivEntry p{
+  font-size: 2.5em;
+}
+
+
+
+/*     PAGE LOCATION     */
+
+#aAfterLocation{
+  display:none;
+}
+
+#locationSpa{
+    width: 55%;
+    height: 70%;
+    margin: 20% auto;
+    text-align:center;
+}
+
+#pWhereYouFrom{
+  font-size: 2em;
+}
+
+
+#divError{
+    display: none;
+    font-size: 2em;
+}
+
+#loading1{
+    animation-name: loadingFirstDot;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes loadingFirstDot {
+    from{
+    opacity: 0;
+  }
+  24%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+    to{
+    opacity: 1;
+  }
+}
+#loading2{
+    animation-name: loadingSecondDot;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes loadingSecondDot {
+    from{
+    opacity: 0;
+  }
+  49%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+    to{
+    opacity: 1;
+  }
+}
+#loading3{
+    animation-name: loadingThirdDot;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes loadingThirdDot {
+    from{
+    opacity: 0;
+  }
+  74%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 1;
+  }
+    to{
+    opacity: 1;
+  }
+}
 
 
 
@@ -265,79 +404,6 @@ body{
 
 
 
-/*     PAGE LOCATION     */
-
-
-#divError{
-    display: none;
-    color: black;
-}
-
-#loading1{
-    animation-name: loadingFirstDot;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-
-@keyframes loadingFirstDot {
-    from{
-    opacity: 0;
-  }
-  24%{
-    opacity: 0;
-  }
-  25%{
-    opacity: 1;
-  }
-    to{
-    opacity: 1;
-  }
-}
-#loading2{
-    animation-name: loadingSecondDot;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-
-@keyframes loadingSecondDot {
-    from{
-    opacity: 0;
-  }
-  49%{
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-    to{
-    opacity: 1;
-  }
-}
-#loading3{
-    animation-name: loadingThirdDot;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-
-@keyframes loadingThirdDot {
-    from{
-    opacity: 0;
-  }
-  74%{
-    opacity: 0;
-  }
-  75%{
-    opacity: 1;
-  }
-    to{
-    opacity: 1;
-  }
-}
-
-
 
 
 /*     PAGE CONCLUSION     */
@@ -346,7 +412,7 @@ body{
 #end{
     text-align: center;
     width: 50%;
-    margin: auto;
+    margin: 5% auto;
 }
 
 #end h1{
@@ -418,7 +484,7 @@ body{
 /*     NO DISPLAY CLASS - (for once the transition is completed)     */
 
 .noDisplay{
-    display: none;
+    display: none !important;
 }
 
 

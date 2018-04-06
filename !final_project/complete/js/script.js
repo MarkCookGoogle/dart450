@@ -4,16 +4,24 @@
 // Major interactive parts: Drag and drop (1), Location information (2), Input analysis (3).
 // *The numbers on the line before are used to quickly see which chunk of code the lines are associated with.
 
+
+
+// (2) Borrowing your Google Maps API key to use Google's (reverse) geocoding
+var geocodeAPIKey = "AIzaSyAdowACHRvSfVV60ck8AJwkFg_i7_Vx_0c";
+
+// (2) getting JSON data about the user's location.
+var geocodeURL = "https://maps.googleapis.com/maps/api/geocode/json";
+
 $(document).ready(function () {
 //do this when the page is ready
 
 
 //(2) When the button #buttonAfterDestDrag will be clicked, it will activate a function to get the location of the user.
-$("#buttonAfterDestDrag").click(locationSection);
+$("#aResultDivEntry").click(locationSection);
 
 
 // (3)**********************************
-  //$('#').on('mousedown',showAnswerToText);
+  //$('#').on('mousedown',showAnswerToText); also, if there is nothing interesting, send a link with a page on "how to be less boring"!
 
 
 // (1) the next lines about #you and #divDestinationX are there to set up the drag and drop action for the section #destinationDrag.
@@ -116,7 +124,6 @@ function locationSection() {
 
 // (2) This function will analyse the information and give a response to the user
 function gotCoordinatesData (data) {
-  console.log("Got coordinates.");
 
 
   // (2) Put the user's coordinates in a string, separated by a comma
@@ -138,7 +145,6 @@ function gotCoordinatesData (data) {
 // (2) Called by getJSON when Google has responded with geocoding
 // (2) data argument contains the geocoding data
 function gotGeocodeData (data) {
-  console.log("Got geocoding data.");
 
   // (2) Pull out the user's formatted address (a string)
   var resultsArray = data.results[0].address_components;
@@ -149,14 +155,13 @@ function gotGeocodeData (data) {
   var types = resultsArray[i].types;
   if(types.indexOf("locality") != -1){
     city = resultsArray[i].long_name;
-    console.log(city);
   }
 }
 // (2) With the information gathered, it is now possible to use the city of the user and change the text of the #pWhereYouFrom.
  $("#pWhereYouFrom").text("Oh you're from " + city + "! Your life must be exhausted... Why don't you treat yourself a little and go to a nearby spa center? (look at your popup filter if the page is not opening)");
 // (2) Opening a window of a Google search with "spa" + the city of the user... To awaken his consumer's spirit!
-  window.open("https://www.google.ca/search?q=spa+" + city + "&oq=spa+montreal&aqs=chrome.0.69i59j0l5.2759j0j7&sourceid=chrome&ie=UTF-8", "_blank");
-  window.focus();
+  window.open("https://www.google.ca/search?q=spa+" + city + "&oq=spa+montreal&aqs=chrome.0.69i59j0l5.2759j0j7&sourceid=chrome&ie=UTF-8",  "newwindow", "width = 400, height = 400, bottom=350, right = 350", "_blank");
+  $("#aAfterLocation").css("display", "inline-block");
 }
 
 // (2) handleError()
