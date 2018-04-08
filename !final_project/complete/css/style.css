@@ -44,15 +44,15 @@ body{
 
 /*     HIDING CONTENT AT THE START     */
 
+#divIntro{
+  display:none;
+}
 
 #wrapperColors{
     display:none;
     opacity:0;
 }
 
-#divTxtEntry{
-  display:none;
-}
 
 #resultDivEntry{
   display:none;

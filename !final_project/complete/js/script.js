@@ -21,7 +21,7 @@ $("#aResultDivEntry").click(locationSection);
 
 
 // (3)**********************************
-  //$('#').on('mousedown',showAnswerToText); also, if there is nothing interesting, send a link with a page on "how to be less boring"!
+  $('#aTxtEntry').on('click',showAnswerToText); //also, if there is nothing interesting, send a link with a page on "how to be less boring"!
 
 
 // (1) the next lines about #you and #divDestinationX are there to set up the drag and drop action for the section #destinationDrag.
@@ -181,26 +181,57 @@ function handleError() {
 
 
 
+// (3)
+var txtResultChanged = false;
 
-
-// (3) **********************
-function handleInput() {
+// (3) Showing a text message in response to the text written, and also opening some advertising pages depending on what's in the text.
+function showAnswerToText() {
   // (3) Get the input text
-  var inputText = $('#input').val();
-  // (3) Check if there's something there
-  if (inputText.indexOf('money') !== -1) {
+  var inputText = $('#txtAreaEntry').val();
+  // (3) Check if there's something there that is interesting. 
+  //If nothing is caught, it will display the default message I put in the html, saying the person is boring.
+  //There will also be pop ups opening depending on what the message written is about.
 
+  //here, instead of just 'money', I would like to have an array of json words related to money, 
+  //and if there is something found, it does the stuff described on the next lines.
+  //example: money or bitcoin or cash or etc...
+  if (inputText.indexOf('money') !== -1){
+    $("#pResultTxtEntry").html('you got money');
+    txtResultChanged = true;
   }
+  //same thing for the next categories
+  if (inputText.indexOf('animal') !== -1){
+    if(txtResultChanged === true){
+      $("#pResultTxtEntry").after('<p>you got animals</p>');
+    }
+    else{ 
+      $("#pResultTxtEntry").html('');
+      txtResultChanged = true;
+    }
+  }
+  if (inputText.indexOf('food') !== -1){
+    if(txtResultChanged === true){
+      $("#pResultTxtEntry").after('<p>you love food</p>');
+    }
+    else{ 
+      $("#pResultTxtEntry").html('you love food');
+      txtResultChanged = true;
+    }
+  }
+  if (inputText.indexOf('videogames') !== -1 || inputText.indexOf('video games') !== -1){
+    if(txtResultChanged === true){
+      $("#pResultTxtEntry").after('<p>you love video games</p>');
+    }
+    else{ 
+      $("#pResultTxtEntry").html('you love video games');
+      txtResultChanged = true;
+    }
+  }
+
+  if(txtResultChanged === false){
+    window.open("https://www.wikihow.com/Be-a-Less-Boring-Person",  "newwindow", "width = 400, height = 400, top=300, left = 800", "_blank");
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
 
 
