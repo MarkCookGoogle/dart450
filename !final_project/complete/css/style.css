@@ -44,7 +44,7 @@ body{
 
 /*     HIDING CONTENT AT THE START     */
 
-#divIntro{
+#divTxtEntry{
   display:none;
 }
 
@@ -190,7 +190,7 @@ body{
 }
 
 #resultDivEntry p{
-  font-size: 2.5em;
+  font-size: 1.4em;
 }
 
 
