@@ -320,8 +320,11 @@ for(var i=0; i < linksArrayEnd.length; i++){
 //(4) for each element in the array, a popup will appear with the link the element contains.
   window.open(linksArrayEnd[i], "finalPopUpLoop"+i, "width = 400, height = 400, top=" + randomNumberYLoop + ", left = " + randomNumberXLoop, "_blank");
 }
+//(4) Here we set a timeout of 8 seconds so the user has time to read what is on the last page.
+//(4) and then spam her with pages of what could have interested her.
+setTimeout( function(){ 
 //(4) after the for loop is done, a popup will appear every 100ms (0.1s).
-setInterval(function () {
+setInterval(function destroyingTheUser() {
   //(4) it start by getting a random number within the array length to be able to take one random link in that array.
   var randomNumberElement = Math.floor(Math.random() * linksArrayEnd.length);
 //(4) again, we go get a random position for the window.
@@ -331,6 +334,9 @@ setInterval(function () {
 //(4) it will be infinitely running until the user closes the page of this website.
   window.open(linksArrayEnd[randomNumberElement], "finalPopUp" + numberEndPage, "width = 400, height = 400, top=" + randomNumberY + ", left = " + randomNumberX , "_blank");
   numberEndPage++;
-  },100)
+  },50)
+  }  , 8000 );
 }
+
+
 
